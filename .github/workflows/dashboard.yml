@@ -19,7 +19,6 @@ jobs:
       - uses: actions/checkout@v2
       - run:  rm -rf node_modules
       - run:  rm package-lock.json
-      - run:  npm cache clean
       - run:  npm install node-sass@latest
       - run:  npm install
       - run:  npm run build
