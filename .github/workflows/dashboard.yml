@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: npm config set unsafe-perm true
+      - run:  npm i --unsafe-perm node-sass
       - run:  npm install
       - run:  npm run build
 
