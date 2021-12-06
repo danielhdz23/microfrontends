@@ -21,5 +21,8 @@ module.exports = {
         template: './public/index.html',
       }),
     ],
+    resolve: {
+      extensions: ['.ts', '.js'],
+    }
   };
   

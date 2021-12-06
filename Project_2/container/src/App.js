@@ -21,14 +21,17 @@ export default () => {
   return (
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
-        <Header isSignedIn={isSignedIn} onSignOut={() => setIsSignedIn(false)} />
+        <Header
+          isSignedIn={isSignedIn}
+          onSignOut={() => setIsSignedIn(false)}
+        />
         <Suspense fallback={<Progress />}>
           <Switch>
             <Route path='/auth'>
               <AuthLazy onSignIn={() => setIsSignedIn(true)} />
             </Route>
             <Route path='/'>
-              <MarketingLazy  />
+              <MarketingLazy />
             </Route>
           </Switch>
         </Suspense>
