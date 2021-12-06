@@ -20,7 +20,7 @@ jobs:
       - run:  rm -rf node_modules
       - run:  rm package-lock.json
       - run:  npm install -g --unsafe-perm node-sass
-      - run:  npm install
+      - run:  npm install --unsafe-perm
       - run:  npm run build
 
       - name: ACTIONS_ALLOW_UNSECURE_COMMANDS
