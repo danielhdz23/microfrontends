@@ -17,8 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run:  npm install
-      - run:  npm run build
+      - run:  rm -rf ./node_modules ./package-lock.json ./yarn.lock
+      - run:  yarn install
+      - run:  yarn build
 
       - name: ACTIONS_ALLOW_UNSECURE_COMMANDS
         run: echo 'ACTIONS_ALLOW_UNSECURE_COMMANDS=true' >> $GITHUB_ENV
